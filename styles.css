@@ -1,0 +1,472 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #E5E5E5;
+}
+
+.btn-custom-filled {
+  background-color: #FFBC51;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  color: white;
+}
+
+.main-hero {
+  position: relative;
+  /*min-height: 100vh;*/
+  overflow: hidden;
+  /*z-index: 0;*/
+  color: white;
+
+}
+
+.hero-bg {
+  position: absolute;
+  width: 100%;       
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.main-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  z-index: -1; 
+}
+
+/* .custom-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f9f8fd 100%);
+  border: none;
+  border-left: 5px solid #6f42c1;
+  box-shadow: 0 10px 30px rgba(111, 66, 193, 0.08);
+  border-radius: 10px;
+} */
+
+.blinq-card {
+  position: relative;
+  background: linear-gradient(135deg, #ffffff 0%, #f7f5fd 100%) !important;
+  border: none !important;
+  box-shadow: 0 10px 25px rgba(92, 14, 98, 0.06) !important;
+  border-radius: 10px !important;
+  overflow: hidden; /* Keeps the gradient bar neatly clipped inside the rounded corners */
+}
+
+/* Creates the vertical gradient accent line on the left */
+.blinq-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px; /* Thickness of the side bar */
+  background: linear-gradient(to bottom, #00B5D0, #5C0E62);
+}
+
+
+/* Forces all navbar links to be pure white by default */
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+/* Exact positioning and dimensions for your content box */
+.hero-content-box {
+  position: absolute;
+  left: 168px;
+  top: 239.02px;
+  width: 421px;
+  height: 281.98px;
+  box-sizing: border-box;
+  /* Ensures padding doesn't break your exact dimensions */
+}
+
+/* Custom button color matching your previous preference */
+.btn-custom-blue {
+  background-color: #798AC9;
+  border-color: #798AC9;
+  color: #ffffff !important;
+}
+
+.btn-custom-blue:hover {
+  background-color: #6373b5;
+  border-color: #6373b5;
+  color: #ffffff !important;
+}
+
+/* Staggered / Overlapping Image Layout */
+.staggered-images {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Base image (Left) */
+.hero-img-base {
+  width: 70%;
+  z-index: 1;
+}
+
+/* Overlay image (Shifted to overlap beside/below the base image) */
+.hero-img-overlay {
+  width: 70%;
+  margin-left: -30%;
+  /* Pulls it horizontally over the first image */
+  margin-top: 15%;
+  /* Shifts it downwards for a staggered look */
+  z-index: 2;
+}
+
+
+.gray-logos img {
+  filter: grayscale(100%);
+  /* Strips out all color, turning it black and white */
+  opacity: 0.4;
+  /* Lightens them to a soft gray look */
+  transition: all 0.3s ease;
+  /* Optional: makes hover animations smooth */
+  
+  margin: 30px;
+}
+
+/* Optional: Turns the logos back to normal or brighter when hovered */
+.gray-logos img:hover {
+  filter: grayscale(0%);
+  opacity: 0.8;
+}
+
+.custom-violet {
+  color: #5C0E62;
+}
+
+.text-custom-gray {
+    color: #857885 !important;
+  }
+
+.cust-m-100 {
+  margin-top: 100px;
+}
+
+
+/* ///////    Footer    /////////// */
+
+.bg-custom {
+  background-color: #210933;
+}
+
+.py-6 {
+  padding-top: 5rem !important;
+  /* Adjust this value (e.g., 5rem, 6rem) to make it as large as you want */
+  padding-bottom: 5rem !important;
+}
+
+.bg-custom {
+  background-color: #210933;
+}
+
+.color-custm {
+  color: #210933;
+}
+
+/* Positions the banner exactly half-way over the top edge of the footer */
+.custom-banner {
+  top: 0;
+  transform: translateY(-50%);
+}
+
+
+
+/* ///////    Testimonials: gradient built in CSS (no PNG)    /////////// */
+
+:root {
+  /* height of the slanted top edge; everything below is tied to this */
+  --slope: clamp(70px, 15vw, 280px);
+}
+
+.testimonial-bg-img {
+  position: relative;
+  background: linear-gradient(100deg, #581566 0%, #2a6199 55%, #00b9d8 100%);
+  /* slanted top edge: left side is lower, right side is at the top */
+  clip-path: polygon(0 var(--slope), 100% 0, 100% 100%, 0 100%);
+  /* tuck the slanted corner under the section above */
+  margin-top: calc(var(--slope) * -1);
+  padding-top: calc(var(--slope) + 60px) !important;
+  padding-bottom: 140px !important;  /* room for the "What Are You Waiting For?" banner */
+  width: 100%;
+}
+
+/* soft decorative blobs from the Figma (left + right) */
+/* .testimonial-bg-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 22vw 34vw at -4vw 85%, rgba(255, 255, 255, 0.16) 0 99%, transparent 100%),
+    radial-gradient(ellipse 20vw 36vw at 104vw 75%, rgba(255, 255, 255, 0.20) 0 99%, transparent 100%);
+} */
+
+.testimonial-bg-img > .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 991px) {
+  .testimonial-bg-img {
+    padding-bottom: 120px !important;
+  }
+}
+
+/* ///////    Secure Transaction row (image bleeds to right edge)    /////////// */
+
+main img {
+  vertical-align: middle;
+}
+
+.secure-row {
+  display: flex;
+  flex-direction: column;   /* mobile: text above image */
+  gap: 2rem;
+  margin-bottom: calc(var(--slope) + 30px);  /* keeps the image clear of the gradient slope */
+}
+
+.secure-media {
+  position: relative;
+  z-index: 2;               /* stays above the testimonial background */
+}
+
+.secure-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 992px) {
+  .secure-row {
+    flex-direction: row;
+    align-items: center;
+  }
+  .secure-text {
+    flex: 0 0 55%;
+  }
+  .secure-media {
+    flex: 0 0 auto;
+    width: 40vw;              /* image size: raise/lower this to match Figma */
+    max-width: 640px;
+    margin-left: auto;        /* pushes the image to the right end of the row */
+    /* cancels the container's side margin so the image reaches the screen edge */
+    margin-right: calc(50% - 50vw);
+  }
+}
+
+
+/* ///////    Testimonials: avatar cloud + review (desktop)    /////////// */
+
+/* the right column needs a real height, because its content is absolutely positioned */
+@media (min-width: 992px) {
+  .avatar-cloud-container {
+    min-height: 540px;
+  }
+}
+
+/* headline sits lower than the review, like the Figma */
+@media (min-width: 992px) {
+  .testimonial-left {
+    align-self: flex-end;
+    margin-bottom: 10px;
+  }
+}
+
+/* the featured review */
+.active-testimonial {
+  left: 52%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  max-width: 90%;
+  color: #fff;
+}
+
+.active-testimonial p {
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #fff;
+}
+
+.active-testimonial h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.active-testimonial small {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* The avatar PNGs already include their own white ring, shadow and padding,
+   so the wrapper only positions them (no border/background/shadow of its own). */
+.avatar-bubble {
+  position: absolute;
+  transform: translate(-50%, -50%);   /* left/top below = the avatar's CENTER */
+  line-height: 0;
+}
+
+.avatar-bubble img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* sizes are bigger than the visible face because the PNGs have built-in padding */
+.avatar-center        { width: 180px; left: 52%;  top: 25%; }
+.avatar-top-right     { width: 144px; left: 100%; top: 11%; }
+.avatar-mid-right     { width: 108px; left: 94%;  top: 51%; }
+.avatar-bottom-center { width: 130px; left: 66%;  top: 89%; }
+.avatar-bottom-right  { width: 96px;  left: 108%; top: 88%; }
+
+/* mobile carousel avatar */
+.mobile-avatar-box {
+  width: 130px;     /* PNG includes ring + padding */
+}
+.mobile-avatar-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.max-width-review { max-width: 340px; }
+.text-white-70    { color: rgba(255, 255, 255, 0.7); }
+/* ///////    Hero monitor image (desktop): big, pinned to the right like the Figma    /////////// */
+
+@media (min-width: 992px) {
+  /* let the image position itself against the whole hero, not the half-width column */
+  .hero-image-block { position: static !important; }
+
+  .staggered-images {
+    position: absolute;
+    top: 20%;            /* lower number = image moves up */
+    right: 8vw;          /* lower number = image moves further right */
+    width: 44vw;         /* image size */
+    max-width: 900px;
+    z-index: 1;
+  }
+
+  .hero-img-base { width: 100%; }
+}
+
+/* ==========================================================================
+   MOBILE / TABLET LAYOUT (below 992px): everything stacks, like the mobile Figma
+   ========================================================================== */
+@media (max-width: 991.98px) {
+
+  body { background-color: #fff; }
+
+  /* slope on small screens: 0px = perfectly straight edge (the whole testimonial section follows this) */
+  :root { --slope: 0px; }
+
+  /* ---- Hero: CSS gradient instead of the desktop PNG ---- */
+  .hero {
+    min-height: auto;
+    background: linear-gradient(160deg, #581566 0%, #2a6199 55%, #00b9d8 100%);
+    /* border-radius: 0 0 50% 50% / 0 0 32px 32px; */
+    padding-bottom: 2.5rem;
+  }
+  .hero-bg { display: none; }
+  .hero-body { margin-top: 1rem !important; margin-bottom: 0 !important; }
+
+  /* opened menu gets its own panel */
+  .navbar-collapse {
+    background: rgba(40, 10, 70, 0.85);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 0.75rem;
+  }
+
+  /* ---- Logos: one row at the bottom of the hero, white on the gradient ---- */
+  .hero-logos { margin-top: 1.75rem; }
+  .hero-logos img {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 18%;
+    max-height: 26px;
+    object-fit: contain;
+    /* The PNGs are black. Lift the black to a light grey and keep the light details
+       (oval lettering, TikTok note) white, like the Figma. */
+    filter: contrast(0.35) brightness(2.4);
+    opacity: 0.8;
+  }
+
+  /* Land Rover (first) and TikTok (last): exact colours via the SVG filters in index.html */
+  .hero-logos img:first-child {                                               /* #B7C0BD + white outline */
+    filter: url(#logo-landrover)
+            drop-shadow(1px 0 0 #fff) drop-shadow(-1px 0 0 #fff)
+            drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 0 #fff);
+    opacity: 1;
+  }
+  .hero-logos img:last-child  { filter: url(#logo-tiktok);    opacity: 1; }   /* #8E7A7A */
+
+  /* ---- Sections: spacing between stacked blocks ---- */
+  .main-hero > .container:not(.secure-row) { margin-bottom: 2.5rem !important; }
+
+  /* Secure transaction: strip image on top, full width; text below */
+  .secure-row {
+    flex-direction: column-reverse;
+    margin-bottom: 40px;
+  }
+  .secure-media {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
+  /* ---- Testimonials ---- */
+  .testimonial-bg-img {
+    padding-top: calc(var(--slope) + 40px) !important;
+    padding-bottom: 60px !important;   /* banner is hidden on mobile */
+  }
+  .testimonial-bg-img > .container {
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .testimonial-left h2.display-5 {
+    font-size: 1.5rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* carousel: avatar + review first, dots at the bottom */
+  #testimonialCarousel { display: flex; flex-direction: column; }
+  #testimonialCarousel .carousel-indicators {
+    order: 2;
+    margin: 1.5rem 0 0 !important;
+    justify-content: center;
+  }
+  #testimonialCarousel .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    border: 0;
+    border-radius: 50%;
+  }
+  .testimonial-bg-img .active-testimonial p,
+  #testimonialCarousel p { color: #fff; }
+}
+.hero-logos img:first-child {   /* Land Rover */
+  filter:  brightness(3);
+  opacity: 0.7;
+}
+.hero-logos img:last-child {  /* TikTok */
+  filter:  brightness(2.5);
+  opacity: 0.3;
+}
